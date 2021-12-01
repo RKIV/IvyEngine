@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="PixelShader.hlsl" />
+    <FxCompile Include="PMissing.hlsl" />
+    <FxCompile Include="VertexShader.hlsl" />
+    <FxCompile Include="VMissing.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Ivy.cpp">
+      <Filter>Source\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\WIN32\IApplication.cpp">
+      <Filter>Source\Private\Platform\WIN32</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Leaf\LCube.cpp">
+      <Filter>Source\Private\Engine\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Leaf\Leaf.cpp">
+      <Filter>Source\Private\Engine\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Leaf\LStaticMesh.cpp">
+      <Filter>Source\Private\Engine\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\IvyEngine.cpp">
+      <Filter>Source\Private\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IO\Keyboard.cpp">
+      <Filter>Source\Private\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IO\Mouse.cpp">
+      <Filter>Source\Private\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Util\ChiliTimer.cpp">
+      <Filter>Source\Private\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Util\IvyException.cpp">
+      <Filter>Source\Private\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\WIN32\Window.cpp">
+      <Filter>Source\Private\Platform\WIN32</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\Bindable.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\IndexBuffer.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\InputLayout.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\PixelShader.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\Topology.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\TransformConstantBuffer.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\VertexBuffer.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindable\VertexShader.cpp">
+      <Filter>Source\Private\Renderer\Bindable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Graphics.cpp">
+      <Filter>Source\Private\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\IDrawable.cpp">
+      <Filter>Source\Private\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Leaf\LPlane.cpp">
+      <Filter>Source\Private\Engine\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Leaf\LSphere.cpp">
+      <Filter>Source\Private\Engine\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Component\Component.cpp">
+      <Filter>Source\Private\Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Component\CRandomSpherical.cpp">
+      <Filter>Source\Private\Engine\Component</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Ivy.h">
+      <Filter>Source\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\WIN32\WinEntry.h">
+      <Filter>Source\Public\Platform\WIN32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\WIN32\IApplication.h">
+      <Filter>Source\Public\Platform\WIN32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\WIN32\IvyWin.h">
+      <Filter>Source\Public\Platform\WIN32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\IvyEngine.h">
+      <Filter>Source\Public\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Leaf\LCube.h">
+      <Filter>Source\Public\Engine\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Leaf\Leaf.h">
+      <Filter>Source\Public\Engine\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Leaf\LStaticMesh.h">
+      <Filter>Source\Public\Engine\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\IO\Keyboard.h">
+      <Filter>Source\Public\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\IO\Mouse.h">
+      <Filter>Source\Public\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Util\ChiliTimer.h">
+      <Filter>Source\Public\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Util\IvyException.h">
+      <Filter>Source\Public\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Util\IvyMath.h">
+      <Filter>Source\Public\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\WIN32\Window.h">
+      <Filter>Source\Public\Platform\WIN32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\Bindable.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\Bindables.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\ConstantBuffers.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\IndexBuffer.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\InputLayout.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\PixelShader.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\Topology.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\TransformConstantBuffer.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\VertexBuffer.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindable\VertexShader.h">
+      <Filter>Source\Public\Renderer\Bindable</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Graphics.h">
+      <Filter>Source\Public\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\IDrawable.h">
+      <Filter>Source\Public\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\IDrawableBase.h">
+      <Filter>Source\Public\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Leaf\LPlane.h">
+      <Filter>Source\Public\Engine\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Leaf\LSphere.h">
+      <Filter>Source\Public\Engine\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Component\Component.h">
+      <Filter>Source\Public\Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Component\CRandomSpherical.h">
+      <Filter>Source\Public\Engine\Component</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{b77d2b88-07cd-40ec-b1d9-ed75e5f288f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4815f2f9-a0dc-47a2-9f4c-1e7c2c5e61b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private">
+      <UniqueIdentifier>{74d30546-55a0-4c9b-8384-6f330cdc0f33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public">
+      <UniqueIdentifier>{6ae80c43-b402-4083-ab63-6c2981488c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\pch">
+      <UniqueIdentifier>{cb7414d4-4ed2-46e2-a359-a7c3f3a0e4d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Platform">
+      <UniqueIdentifier>{9d10fc0c-687b-45fa-9349-c984f0d304bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Platform\WIN32">
+      <UniqueIdentifier>{0f3be9ea-0b06-4436-97d8-e880be3715b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Platform">
+      <UniqueIdentifier>{e47c3c93-8313-4368-8759-07c033d4ac24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Platform\WIN32">
+      <UniqueIdentifier>{bcda03a3-f919-4b0e-8018-fcf5857145c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Engine">
+      <UniqueIdentifier>{b3019499-7b2c-4750-85f0-2db62326c24a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Engine\Leaf">
+      <UniqueIdentifier>{446169fd-ac4e-4b39-8e73-7477649f37a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\IO">
+      <UniqueIdentifier>{09a09ce4-d837-4aa4-8efd-d75c96789f54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\IO">
+      <UniqueIdentifier>{fac746e0-27f1-41c5-ae67-3c2bf7a3821b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Util">
+      <UniqueIdentifier>{a1f73b46-549b-4266-8cef-871ba13cf84e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Util">
+      <UniqueIdentifier>{1bb3236e-34f7-4b3b-a864-d4694285f802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Renderer">
+      <UniqueIdentifier>{42f7830b-3ce7-435e-ab63-ddfa10ffb243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Renderer\Bindable">
+      <UniqueIdentifier>{0d6dbd34-06b7-4646-9c2f-a8afce2f0c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Renderer">
+      <UniqueIdentifier>{d5ab1a04-f15b-41b0-9fd5-dfffa453ce6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Renderer\Bindable">
+      <UniqueIdentifier>{c4944840-f1a1-45cd-807b-78a2746cc7ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Engine\Component">
+      <UniqueIdentifier>{d9142b25-0422-4038-9c29-982f953be31a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Engine">
+      <UniqueIdentifier>{05d1a875-bf34-4dec-8f6b-da1272dcdfd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Engine\Leaf">
+      <UniqueIdentifier>{812969f9-9cdf-4db2-980c-489dfa0cac3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Engine\Component">
+      <UniqueIdentifier>{3cce41bb-4551-413d-ba3c-3e614dac22f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
