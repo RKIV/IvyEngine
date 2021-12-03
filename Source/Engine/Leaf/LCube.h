@@ -4,9 +4,10 @@
 /** Just a cube static mesh */
 class LCube : public LStaticMesh
 {
+	GENERATE_LEAF(LCube)
+
 public:
 	LCube();
 	void Init() override;
-protected:
-	LCube(const char*);
+	virtual void GenerateMesh();
 };

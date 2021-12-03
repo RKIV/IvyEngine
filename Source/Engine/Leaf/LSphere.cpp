@@ -6,16 +6,54 @@ unsigned int LSphere::latDivDefault = 9;
 unsigned int LSphere::longDivDefault = 9;
 
 LSphere::LSphere()
-	: LSphere("LSphere", latDivDefault, longDivDefault)
+	: LSphere(latDivDefault, longDivDefault)
 {}
 
 LSphere::LSphere(unsigned int latDiv, unsigned int longDiv)
-	: LSphere("LSphere", latDiv, longDiv)
-{}
-
-LSphere::LSphere(const char* Class, unsigned int latDiv, unsigned int longDiv)
-	: LStaticMesh(Class), latDiv(latDiv), longDiv(longDiv)
 {
+	GenerateMesh(latDiv, longDiv);
+}
+
+void LSphere::Init()
+{
+	struct ConstantBuffer2
+	{
+		struct
+		{
+			float r;
+			float g;
+			float b;
+			float a;
+		} face_colors[6];
+	};
+
+	const ConstantBuffer2 cb2 =
+	{
+		{
+			{ 1.0f,0.0f,1.0f },
+			{ 1.0f,0.0f,0.0f },
+			{ 0.0f,1.0f,0.0f },
+			{ 0.0f,0.0f,1.0f },
+			{ 1.0f,1.0f,0.0f },
+			{ 0.0f,1.0f,1.0f },
+		}
+	};
+
+	AddBind(new PixelConstantBuffer<ConstantBuffer2>(cb2));
+
+	if (latDiv != 9 || longDiv != 9)
+	{
+		AddBind(new VertexBuffer(Vertices));
+		AddIndexBuffer(new IndexBuffer(Indices));
+	}
+
+	LStaticMesh::Init();
+}
+
+void LSphere::GenerateMesh(unsigned int _latDiv, unsigned int _longDiv)
+{
+	latDiv = _latDiv;
+	longDiv = _longDiv;
 	assert(latDiv >= 3);
 	assert(longDiv >= 3);
 
@@ -49,8 +87,8 @@ LSphere::LSphere(const char* Class, unsigned int latDiv, unsigned int longDiv)
 	Vertices.emplace_back();
 	DX::XMStoreFloat3(&Vertices.back().pos, DX::XMVectorNegate(base));
 
-	const auto calcIdx = [latDiv, longDiv](unsigned short iLat, unsigned short iLong)
-	{ return iLat * longDiv + iLong; };
+	const auto calcIdx = [_latDiv, _longDiv](unsigned short iLat, unsigned short iLong)
+	{ return iLat * _longDiv + iLong; };
 	for (unsigned short iLat = 0; iLat < latDiv - 2; iLat++)
 	{
 		for (unsigned short iLong = 0; iLong < longDiv - 1; iLong++)
@@ -94,40 +132,4 @@ LSphere::LSphere(const char* Class, unsigned int latDiv, unsigned int longDiv)
 	Indices.push_back(iSouthPole);
 
 	PixelShaderPath = L"PixelShader.cso";
-}
-
-void LSphere::Init()
-{
-	struct ConstantBuffer2
-	{
-		struct
-		{
-			float r;
-			float g;
-			float b;
-			float a;
-		} face_colors[6];
-	};
-
-	const ConstantBuffer2 cb2 =
-	{
-		{
-			{ 1.0f,0.0f,1.0f },
-			{ 1.0f,0.0f,0.0f },
-			{ 0.0f,1.0f,0.0f },
-			{ 0.0f,0.0f,1.0f },
-			{ 1.0f,1.0f,0.0f },
-			{ 0.0f,1.0f,1.0f },
-		}
-	};
-
-	AddBind(new PixelConstantBuffer<ConstantBuffer2>(cb2));
-
-	if (latDiv != 9 || longDiv != 9)
-	{
-		AddBind(new VertexBuffer(Vertices));
-		AddIndexBuffer(new IndexBuffer(Indices));
-	}
-
-	LStaticMesh::Init();
 }

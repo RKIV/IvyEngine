@@ -3,17 +3,22 @@
 #include "Renderer/Bindable/Bindables.h"
 
 LPlane::LPlane()
-	: LPlane("LPlane", 1, 1)
+	: LPlane(1, 1)
 {}
+
 
 LPlane::LPlane(unsigned int divisions_x, unsigned int divisions_y)
-	: LPlane("LPlane", divisions_x, divisions_y)
-{}
-
-
-LPlane::LPlane(const char* Class, unsigned int divisions_x, unsigned int divisions_y)
-	: LStaticMesh(Class), divisions_x(divisions_x), divisions_y(divisions_y)
 {
+	GenerateMesh(divisions_x, divisions_y);
+}
+
+
+
+
+void LPlane::GenerateMesh(unsigned int _divisions_x, unsigned int _divisions_y)
+{
+	divisions_x = _divisions_x;
+	divisions_y = _divisions_y;
 
 	assert(divisions_x >= 1);
 	assert(divisions_y >= 1);
@@ -23,6 +28,7 @@ LPlane::LPlane(const char* Class, unsigned int divisions_x, unsigned int divisio
 	const int nVertices_x = divisions_x + 1;
 	const int nVertices_y = divisions_y + 1;
 
+	Vertices.clear();
 	Vertices.resize(nVertices_x * nVertices_y);
 
 	// Generating vertices
@@ -48,6 +54,7 @@ LPlane::LPlane(const char* Class, unsigned int divisions_x, unsigned int divisio
 	}
 
 	// Generating indices
+	Indices.clear();
 	Indices.reserve((divisions_x * divisions_y) * 6);
 	{
 		const auto vxy2i = [nVertices_x](size_t x, size_t y)
@@ -71,9 +78,6 @@ LPlane::LPlane(const char* Class, unsigned int divisions_x, unsigned int divisio
 
 	PixelShaderPath = L"PixelShader.cso";
 }
-
-
-
 
 void LPlane::Init()
 {

@@ -3,12 +3,15 @@
 
 class LPlane : public LStaticMesh
 {
+	GENERATE_LEAF(LPlane)
+
+
 public:
 	LPlane();
 	LPlane(unsigned int divisions_x, unsigned int divisions_y);
-	void Init() override;
+	virtual void GenerateMesh(unsigned int divisions_x, unsigned int divisions_y);
 protected:
-	LPlane(const char*, unsigned int divisions_x, unsigned int divisions_y);
+	void Init() override;
 private:
 	int divisions_x;
 	int divisions_y;

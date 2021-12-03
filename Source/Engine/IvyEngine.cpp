@@ -8,8 +8,8 @@ IvyEngine::IvyEngine()
 	wnd(1280, 720, L"Ivy Main Window")
 {
 	pGfx = std::make_unique<Graphics>(wnd.GetHWND());
-	//pGfx->SetProjection(DirectX::XMMatrixOrthographicLH(20.0f, 20.0f * 9.0f / 16.0f, 0.5f, 40.0f));
-	pGfx->SetProjection(DirectX::XMMatrixPerspectiveLH(1.0f, 9.0f / 16.0f, 0.5f, 40.0f));
+	pGfx->SetProjection(DirectX::XMMatrixOrthographicLH(100.0f, 100.0f * 9.0f / 16.0f, 0.5f, 50.0f));
+	//pGfx->SetProjection(DirectX::XMMatrixPerspectiveLH(1.0f, 9.0f / 16.0f, 0.5f, 100.0f));
 }
 
 IvyEngine::~IvyEngine()

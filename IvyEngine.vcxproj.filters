@@ -177,6 +177,12 @@
     <ClInclude Include="Source\Engine\Component\CRandomSpherical.h">
       <Filter>Source\Public\Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Util\nlohmann\json.hpp">
+      <Filter>Source\Public\Util\nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Util\OgmoParser.h">
+      <Filter>Source\Public\Util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resources">
@@ -247,6 +253,9 @@
     </Filter>
     <Filter Include="Source\Private\Engine\Component">
       <UniqueIdentifier>{3cce41bb-4551-413d-ba3c-3e614dac22f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Util\nlohmann">
+      <UniqueIdentifier>{273a6782-238c-4f96-818b-1233dc786c36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

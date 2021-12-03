@@ -10,10 +10,11 @@ struct VertexBase
 
 class LStaticMesh : public Leaf, public IDrawable
 {
+	GENERATE_LEAF(LStaticMesh)
+
 public:
 	LStaticMesh();
 protected:
-	LStaticMesh(const char*);
 	virtual void Init() override;
 protected:
 

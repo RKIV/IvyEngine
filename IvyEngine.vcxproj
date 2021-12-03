@@ -165,6 +165,8 @@
     <ClInclude Include="Source\Util\ChiliTimer.h" />
     <ClInclude Include="Source\Util\IvyException.h" />
     <ClInclude Include="Source\Util\IvyMath.h" />
+    <ClInclude Include="Source\Util\nlohmann\json.hpp" />
+    <ClInclude Include="Source\Util\OgmoParser.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="PixelShader.hlsl">

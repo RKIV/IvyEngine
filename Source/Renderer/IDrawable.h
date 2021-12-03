@@ -28,6 +28,7 @@ public:
 
 	void AddBindCDO(Bindable* bind);
 	void AddIndexBufferCDO(IndexBuffer* ibuf);
+	void ClearBinds();
 	virtual ~IDrawable();
 private:
 	const IndexBuffer* pIndexBuffer = nullptr;

@@ -71,11 +71,17 @@ void IDrawable::AddIndexBufferCDO(IndexBuffer* ibuf)
 	CDO->AddIndexBuffer(ibuf);
 }
 
-IDrawable::~IDrawable()
+void IDrawable::ClearBinds()
 {
 	for (auto& bind : binds)
 	{
 		delete bind.second;
 	}
+	pIndexBuffer = nullptr;
+}
+
+IDrawable::~IDrawable()
+{
+	ClearBinds();
 }
 

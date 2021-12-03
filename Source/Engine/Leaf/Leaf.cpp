@@ -33,14 +33,9 @@ void Leaf::LeafInit()
 	{
 		C->Init();
 	}
-	if(CDOMap.contains(CLASS)) CDOMap[CLASS]->Init();
+	//GetCDO()->Init();
 	Init();
 }
-
-
-Leaf::Leaf()
-	: CLASS("Leaf")
-{}
 
 Leaf::~Leaf()
 {
@@ -72,9 +67,16 @@ DirectX::XMMATRIX Leaf::GetTransformXM() const
 	}
 }
 
-Leaf::Leaf(const char* Class)
-	:CLASS(Class)
-{}
+Leaf* Leaf::AddSubLeaf(LeafClass lc, const char* SubName)
+{
+	Leaf* l = lc.CDO->Instantiate();
+	l->parent = this;
+	children.push_back(l);
+	strcpy_s(l->Name, MAX_NAME_LENGTH, SubName);
+	IDrawable* d = dynamic_cast<IDrawable*>(l);
+	if (d) d->ClearBinds();
+	return l;
+}
 
 void Leaf::Init()
 {

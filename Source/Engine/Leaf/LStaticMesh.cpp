@@ -2,12 +2,8 @@
 #include "LStaticMesh.h"
 #include "Renderer/Bindable/Bindables.h"
 
-LStaticMesh::LStaticMesh(const char* Class)
-	:Leaf(Class), IDrawable((Leaf *)this)
-{}
-
 LStaticMesh::LStaticMesh()
-	: LStaticMesh("LStaticMesh")
+	:IDrawable((Leaf *)this)
 {}
 
 void LStaticMesh::Init()
